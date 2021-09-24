@@ -1,7 +1,9 @@
 package ru.td.shoppinglist.domain
 
+import androidx.lifecycle.LiveData
+
 class GetShopListUseCase(private val shopListRepository:ShopListRepository) {
-    fun GetShopList(): List<ShopItem> {
+    fun GetShopList(): LiveData<List<ShopItem>> {
         return   shopListRepository.GetShopList()
     }
 }
